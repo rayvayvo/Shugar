@@ -1,0 +1,36 @@
+// Place all the styles related to the Gallery controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbutton {
+margin: 5%;
+border: 1px solid black;
+width: 150%;
+line-height: 200%;
+font-size: 125%;
+padding-left: 3%;
+
+}
+
+.slideshow_image {
+  width:12vw;
+  height: 12vw;
+  background-color: lightgrey;
+  float:left;
+  margin: 2% 2% 2% 2%;
+}
+
+#sidebar_buttons {
+  float: left;
+}
+
+#slideshow{
+  margin-left: 28%;
+  width: 50%;
+  position: relative;
+  top: -3vw;
+}
+
+#pageindex {
+  float:right;
+}
