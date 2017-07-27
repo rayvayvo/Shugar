@@ -1,0 +1,2 @@
+class MixedMediaController < ApplicationController
+end

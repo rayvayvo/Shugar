@@ -2,13 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+body {
+  background-color: ghostwhite;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
 .navbutton {
-margin: 5%;
-border: 1px solid black;
-width: 150%;
+margin: 5% 0 5% 5%;
+border-left: 1px solid lightgrey;
+border-top: 1px solid lightgrey;
+border-bottom: 1px solid lightgrey;
 line-height: 200%;
 font-size: 125%;
 padding-left: 3%;
+background-color: white;
 
 }
 
@@ -21,16 +31,36 @@ padding-left: 3%;
 }
 
 #sidebar_buttons {
+  width: 30%;
   float: left;
-}
-
-#slideshow{
-  margin-left: 28%;
-  width: 50%;
-  position: relative;
-  top: -3vw;
 }
 
 #pageindex {
   float:right;
+}
+
+#placeholder {
+  height: 2.8em;
+}
+
+#mainview {
+  background-color: white;
+  margin-left: 30%;
+  width: 45%;
+  padding-left: 3%;
+  height: 43vw;
+  border: 1px solid lightgrey;
+
+}
+
+#allen {
+background-color: dimgrey;
+color: azure;
+height: 2em;
+line-height: 200%;
+font-size: 20pt;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
 }
