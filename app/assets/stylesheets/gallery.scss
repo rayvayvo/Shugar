@@ -19,7 +19,15 @@ line-height: 200%;
 font-size: 125%;
 padding-left: 3%;
 background-color: white;
+}
 
+.navbutton2 {
+margin: 5% 0 5% 5%;
+border-bottom: 1px solid lightgrey;
+line-height: 200%;
+font-size: 125%;
+padding-left: 3%;
+background-color: white;
 }
 
 .slideshow_image {
@@ -40,7 +48,7 @@ background-color: white;
 }
 
 #placeholder {
-  height: 2.8em;
+  height: 2.82em;
 }
 
 #mainview {
@@ -50,7 +58,21 @@ background-color: white;
   padding-left: 3%;
   height: 43vw;
   border: 1px solid lightgrey;
+}
 
+#mainview2 {
+  background-color: white;
+  margin-left: 29%;
+  width: 45%;
+  padding-left: 3%;
+  height: 43vw;
+  border-left: 1px solid lightgrey;
+  position: fixed;
+  top: 0;
+  bottom: -11px;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  border-right: 1px solid lightgrey;
 }
 
 #allen {
@@ -63,4 +85,17 @@ position: fixed;
 top: 0;
 left: 0;
 right: 0;
+}
+
+#allen2 {
+background-color: dimgrey;
+color: azure;
+height: 1.5em;
+line-height: 150%;
+font-size: 20pt;
+width: 27%;
+margin-left: 1.5%;
+padding-left: 1%;
+border-bottom: 1px solid aliceblue;
+
 }
