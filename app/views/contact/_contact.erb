@@ -1,1 +1,7 @@
-<div>contact info here</div>
+<div id="contact">contact</div>
+
+<div id="contactinfo">
+  <div><%= Contact.first.body %></div>
+  <div>Phone: <%= Contact.first.phone %></div>
+  <div>Email: <%= Contact.first.email %></div>
+</div>

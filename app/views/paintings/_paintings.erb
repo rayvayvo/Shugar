@@ -1,20 +1,20 @@
 <section id="slideshow">
 
+<% paintings = Gallery.where(media_type:  'paint')%>
+
   <div id="row1">
-    <div class="slideshow_image" id="ss1"></div>
-    <div class="slideshow_image" id="ss2"></div>
-    <div class="slideshow_image" id="ss3"></div>
+    <div class="slideshow_image" id="ss1">
+      <%= image_tag "#{paintings[1].title}.jpg"%>
+    </div>
+    <div class="slideshow_image" id="ss2">
+      <%= image_tag "#{paintings[2].title}.jpg"%>
+    </div>
+    <div class="slideshow_image" id="ss3">
+      <%= image_tag "#{paintings[3].title}.jpg"%>
+    </div>
   </div><br><br>
-  <div id="row2">
-    <div class="slideshow_image" id="ss4"></div>
-    <div class="slideshow_image" id="ss5"></div>
-    <div class="slideshow_image" id="ss6"></div>
-  </div><br><br>
-  <div id="row3">
-    <div class="slideshow_image" id="ss7"></div>
-    <div class="slideshow_image" id="ss8"></div>
-    <div class="slideshow_image" id="ss9"></div>
-  </div>
+
+
 
   <div id="pageindex">'<< < page 1/10 > >>'</div>
  </section>

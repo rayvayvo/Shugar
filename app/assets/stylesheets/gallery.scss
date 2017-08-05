@@ -6,28 +6,29 @@
 
 
 body {
-  background-color: ghostwhite;
+  background-color: white;
   font-family: 'Pathway Gothic One', sans-serif;
 }
 
 .navbutton {
-margin: 5% 0 5% 5%;
-border-left: 1px solid lightgrey;
-border-top: 1px solid lightgrey;
-border-bottom: 1px solid lightgrey;
-line-height: 200%;
-font-size: 125%;
-padding-left: 3%;
-background-color: white;
+  margin: 5% 0 5% 5%;
+  border-bottom: 1px solid lightgrey;
+  line-height: 200%;
+  font-size: 125%;
+  padding-left: 3%;
+  background-color: white;
 }
 
-.navbutton2 {
-margin: 5% 0 5% 5%;
-border-bottom: 1px solid lightgrey;
-line-height: 200%;
-font-size: 125%;
-padding-left: 3%;
-background-color: white;
+.highlighted {
+  background-color: dimgrey;
+}
+
+.highlighted a:link {
+  color: azure;
+}
+
+.highlighted a:visited {
+  color:gold;
 }
 
 .slideshow_image {
@@ -53,15 +54,6 @@ background-color: white;
 
 #mainview {
   background-color: white;
-  margin-left: 30%;
-  width: 45%;
-  padding-left: 3%;
-  height: 43vw;
-  border: 1px solid lightgrey;
-}
-
-#mainview2 {
-  background-color: white;
   margin-left: 29%;
   width: 45%;
   padding-left: 3%;
@@ -76,26 +68,28 @@ background-color: white;
 }
 
 #allen {
-background-color: dimgrey;
-color: azure;
-height: 2em;
-line-height: 200%;
-font-size: 20pt;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
+  background-color: dimgrey;
+  color: azure;
+  height: 1.5em;
+  line-height: 150%;
+  font-size: 20pt;
+  width: 27%;
+  margin-left: 1.5%;
+  padding-left: 1%;
+  border-bottom: 1px solid aliceblue;
 }
 
-#allen2 {
-background-color: dimgrey;
-color: azure;
-height: 1.5em;
-line-height: 150%;
-font-size: 20pt;
-width: 27%;
-margin-left: 1.5%;
-padding-left: 1%;
-border-bottom: 1px solid aliceblue;
+#about {
+  font-size: 28pt;
+  border-bottom: 2px solid limegreen;
+}
 
+#contact {
+  font-size: 28pt;
+  border-bottom: 2px solid coral;
+}
+
+#slideshow img {
+  height: 12vw;
+  width: 12vw;
 }
