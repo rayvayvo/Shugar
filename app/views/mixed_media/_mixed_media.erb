@@ -1,20 +1,94 @@
 <section id="slideshow">
 
+<% count = 0 %>
+<% page = 2 %>
+<% url = request.url.last.to_i %>
+<% if url == 0
+ url = 1
+ end  %>
+<% mixedtotal = Gallery.where(media_type: 'mixed') %>
+<% mixed = Gallery.where(media_type: 'mixed').offset((url * 9) -10)%>
+
+
   <div id="row1">
-    <div class="slideshow_image" id="ss1"></div>
-    <div class="slideshow_image" id="ss2"></div>
-    <div class="slideshow_image" id="ss3"></div>
+    <div class="slideshow_image" id="ss1">
+      <% if mixed[0] %>
+        <%= image_tag "#{mixed[0].title}.jpg"%>
+        <% count += 1 %>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss2">
+      <% if mixed[1] %>
+        <%= image_tag "#{mixed[1].title}.jpg"%>
+        <% count += 1 %>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss3">
+      <% if mixed[2] %>
+        <%= image_tag "#{mixed[2].title}.jpg"%>
+        <% count += 1 %>
+      <% end %>
+    </div>
   </div><br><br>
-  <div id="row2">
-    <div class="slideshow_image" id="ss4"></div>
-    <div class="slideshow_image" id="ss5"></div>
-    <div class="slideshow_image" id="ss6"></div>
+
+ <div id="row2">
+    <div class="slideshow_image" id="ss4">
+      <% if mixed[3] %>
+        <%= image_tag "#{mixed[3].title}.jpg"%>
+        <% count += 1 %>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss5">
+      <% if mixed[4] %>
+        <%= image_tag "#{mixed[4].title}.jpg"%>
+        <% count += 1 %>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss6">
+      <% if mixed[5] %>
+        <% count += 1 %>
+        <%= image_tag "#{mixed[5].title}.jpg"%>
+      <% end %>
+    </div>
   </div><br><br>
-  <div id="row3">
-    <div class="slideshow_image" id="ss7"></div>
-    <div class="slideshow_image" id="ss8"></div>
-    <div class="slideshow_image" id="ss9"></div>
+
+   <div id="row3">
+    <div class="slideshow_image" id="ss7">
+      <% if mixed[6] %>
+        <%= image_tag "#{mixed[6].title}.jpg"%>
+        <% count += 1 %>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss8">
+      <% if mixed[7] %>
+        <%= image_tag "#{mixed[7].title}.jpg"%>
+        <% count += 1 %>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss9">
+      <% if mixed[8] %>
+        <%= image_tag "#{mixed[8].title}.jpg"%>
+        <% count += 1 %>
+      <% end %>
+    </div>
+  </div><br><br>
+
+  <div id="pageindex"> viewing <%= count %> of <%= mixedtotal.count %><br>
+    <% if url > 1 %>
+      <%= link_to "<<", '/mixed' %>
+      <%= link_to "<", "/mixed/#{url - 1}" %>
+    <% else %>
+      << <
+    <% end %>
+
+    <%= "page #{url} / #{(mixedtotal.count.to_f/9).ceil}" %>
+
+    <% if url < (mixedtotal.count.to_f/9).ceil %>
+      <%= link_to ">", "/mixed/#{url + 1}" %>
+      <%= link_to ">>", "/mixed/#{(mixedtotal.count.to_f/9).ceil}"%>
+    <% else %>
+     > >>
+    <% end %>
   </div>
 
-  <div id="pageindex">'<< < page 1/10 > >>'</div>
  </section>

@@ -34,7 +34,7 @@ body {
 .slideshow_image {
   width:12vw;
   height: 12vw;
-  background-color: lightgrey;
+  background-color: white;
   float:left;
   margin: 2% 2% 2% 2%;
 }
@@ -82,14 +82,22 @@ body {
 #about {
   font-size: 28pt;
   border-bottom: 2px solid limegreen;
+  margin-bottom: 3%;
 }
 
 #contact {
   font-size: 28pt;
   border-bottom: 2px solid coral;
+  margin-bottom: 3%;
 }
 
 #slideshow img {
   height: 12vw;
   width: 12vw;
+}
+
+#console {
+  width: 12vw;
+  float: right;
+  margin-right: 5vw;
 }
