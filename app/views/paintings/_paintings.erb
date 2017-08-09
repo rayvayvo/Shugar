@@ -1,60 +1,84 @@
+
+
 <section id="slideshow">
 
-<% paintings = Gallery.where(media_type:  'paint')%>
+<% url = request.url.last.to_i %>
+<% if url == 0
+ url = 1
+ end  %>
+<% paintings = Gallery.where(media_type:  'paint').offset((url * 9) -9)%>
+<% paintings_total = Gallery.where(media_type:  'paint')%>
+
 
   <div id="row1">
     <div class="slideshow_image" id="ss1">
+      <% if paintings[0] %>
+        <%= image_tag "#{paintings[0].title}.jpg"%>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss2">
       <% if paintings[1] %>
         <%= image_tag "#{paintings[1].title}.jpg"%>
       <% end %>
     </div>
-    <div class="slideshow_image" id="ss2">
+    <div class="slideshow_image" id="ss3">
       <% if paintings[2] %>
         <%= image_tag "#{paintings[2].title}.jpg"%>
-      <% end %>
-    </div>
-    <div class="slideshow_image" id="ss3">
-      <% if paintings[3] %>
-        <%= image_tag "#{paintings[3].title}.jpg"%>
       <% end %>
     </div>
   </div><br><br>
 
  <div id="row2">
     <div class="slideshow_image" id="ss4">
+      <% if paintings[3] %>
+        <%= image_tag "#{paintings[3].title}.jpg"%>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss5">
       <% if paintings[4] %>
         <%= image_tag "#{paintings[4].title}.jpg"%>
       <% end %>
     </div>
-    <div class="slideshow_image" id="ss5">
+    <div class="slideshow_image" id="ss6">
       <% if paintings[5] %>
         <%= image_tag "#{paintings[5].title}.jpg"%>
-      <% end %>
-    </div>
-    <div class="slideshow_image" id="ss6">
-      <% if paintings[6] %>
-        <%= image_tag "#{paintings[6].title}.jpg"%>
       <% end %>
     </div>
   </div><br><br>
 
    <div id="row3">
     <div class="slideshow_image" id="ss7">
+      <% if paintings[6] %>
+        <%= image_tag "#{paintings[6].title}.jpg"%>
+      <% end %>
+    </div>
+    <div class="slideshow_image" id="ss8">
       <% if paintings[7] %>
         <%= image_tag "#{paintings[7].title}.jpg"%>
       <% end %>
     </div>
-    <div class="slideshow_image" id="ss8">
+    <div class="slideshow_image" id="ss9">
       <% if paintings[8] %>
         <%= image_tag "#{paintings[8].title}.jpg"%>
       <% end %>
     </div>
-    <div class="slideshow_image" id="ss9">
-      <% if paintings[9] %>
-        <%= image_tag "#{paintings[9].title}.jpg"%>
-      <% end %>
-    </div>
   </div><br><br>
 
-  <div id="pageindex">'<< < page 1/10 > >>'</div>
+    <div id="pageindex">
+    <% if url > 1 %>
+      <%= link_to "<<", '/paintings' %>
+      <%= link_to "<", "/paintings/#{url - 1}" %>
+    <% else %>
+      << <
+    <% end %>
+
+    <%= "page #{url} / #{(paintings_total.count.to_f/9).ceil}" %>
+
+    <% if url < (paintings_total.count.to_f/9).ceil %>
+      <%= link_to ">", "/paintings/#{url + 1}" %>
+      <%= link_to ">>", "/paintings/#{(paintings_total.count.to_f/9).ceil}"%>
+    <% else %>
+     > >>
+    <% end %>
+  </div>
  </section>

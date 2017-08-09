@@ -7,8 +7,13 @@
 
 body {
   background-color: white;
-  font-family: 'Pathway Gothic One', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
 
 .navbutton {
   margin: 5% 0 5% 5%;
@@ -68,15 +73,13 @@ body {
 }
 
 #allen {
-  background-color: dimgrey;
-  color: azure;
+  color: dimgrey;
   height: 1.5em;
   line-height: 150%;
-  font-size: 20pt;
+  font-size: 25pt;
   width: 27%;
   margin-left: 1.5%;
   padding-left: 1%;
-  border-bottom: 1px solid aliceblue;
 }
 
 #about {

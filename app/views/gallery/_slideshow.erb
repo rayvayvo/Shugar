@@ -1,13 +1,12 @@
 <section id="slideshow">
 
 <% count = 0 %>
-<% page = 2 %>
 <% url = request.url.last.to_i %>
 <% if url == 0
  url = 1
  end  %>
 <% gallery = Gallery.where('price > 0').offset((url * 9) -9)%>
-
+<% gallery_total = Gallery.where('price > 0') %>
 
   <div id="row1">
     <div class="slideshow_image" id="ss1">
@@ -80,11 +79,11 @@
       << <
     <% end %>
 
-    <%= "page #{url} / #{(Gallery.count.to_f/9).ceil}" %>
+    <%= "page #{url} / #{(gallery_total.count.to_f/9).ceil}" %>
 
-    <% if url < (gallery.count.to_f/9).ceil %>
+    <% if url < (gallery_total.count.to_f/9).ceil %>
       <%= link_to ">", "/gallery/#{url + 1}" %>
-      <%= link_to ">>", "/gallery/#{(gallery.count.to_f/9).ceil}"%>
+      <%= link_to ">>", "/gallery/#{(gallery_total.count.to_f/9).ceil}"%>
     <% else %>
      > >>
     <% end %>
