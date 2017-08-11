@@ -1,7 +1,15 @@
-<div id="contact">contact</div>
+<% @contact = Contact.first %>
+<% @mail = Mailer.first%>
+
 
 <div id="contactinfo">
-  <div><%= Contact.first.body %></div>
-  <div>Phone: <%= Contact.first.phone %></div>
-  <div>Email: <%= Contact.first.email %></div>
+  <div><%= @contact.body %></div>
 </div>
+<br>
+
+<%= form_for @mail, :method => "put" do |f| %>
+  <div class="curate_label">Subject:<%= f.text_field :subject, :value => "" %></div><br>
+  <%= f.text_area :body, :value => "" %>
+  <br>
+   <%= f.submit "Send Message" %>
+  <% end %>

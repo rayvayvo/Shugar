@@ -12,12 +12,12 @@ body {
 
 a {
   text-decoration: none;
+  color: #999999;
 }
 
 
 .navbutton {
-  margin: 5% 0 5% 5%;
-  border-bottom: 1px solid lightgrey;
+  margin: 1% 0 1% 5%;
   line-height: 200%;
   font-size: 125%;
   padding-left: 3%;
@@ -25,15 +25,15 @@ a {
 }
 
 .highlighted {
-  background-color: dimgrey;
+  background-color: #white;
 }
 
 .highlighted a:link {
-  color: azure;
+  color: #999999;
 }
 
 .highlighted a:visited {
-  color:gold;
+  color:#999999;
 }
 
 .slideshow_image {
@@ -41,7 +41,7 @@ a {
   height: 12vw;
   background-color: white;
   float:left;
-  margin: 2% 2% 2% 2%;
+  margin: 3.25% 3.25% 3.25% 3.25%;
 }
 
 #sidebar_buttons {
@@ -50,7 +50,11 @@ a {
 }
 
 #pageindex {
+  color: #999999;
   float:right;
+  position: relative;
+  top: -3.5vw;
+  left: 14vw;
 }
 
 #placeholder {
@@ -60,16 +64,14 @@ a {
 #mainview {
   background-color: white;
   margin-left: 29%;
-  width: 45%;
-  padding-left: 3%;
+  width: 50%;
+  padding-left: 0%;
   height: 43vw;
-  border-left: 1px solid lightgrey;
   position: fixed;
   top: 0;
   bottom: -11px;
-  padding-top: 3%;
-  padding-bottom: 2%;
-  border-right: 1px solid lightgrey;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 
 #sideview {
@@ -78,10 +80,10 @@ a {
 }
 
 #allen {
-  color: dimgrey;
+  color: #999999;
   height: 1.5em;
   line-height: 150%;
-  font-size: 25pt;
+  font-size: 33pt;
   width: 27%;
   margin-left: 1.5%;
   padding-left: 1%;
@@ -116,8 +118,8 @@ a {
 }
 
 #slideshow img {
-  height: 12vw;
-  width: 12vw;
+  height: 14vw;
+  width: 14vw;
   transition: transform 0.25s ease;
   cursor: zoom-in;
 }
@@ -127,6 +129,15 @@ a {
   width: 12vw;
   transition: transform 0.25s ease;
   cursor: zoom-in;
+}
+
+#aboutimage img {
+  margin-top: 2vw;
+  height: 14vw;
+  width: 14vw;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  float: left;
 }
 
 #console {
@@ -140,15 +151,20 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked ~ label > img {
-  transform: scale(4.15);
+  transform: scale(3.2);
   cursor: zoom-out;
   position: fixed;
-  top: 37%;
-  left: 47%;
+  top: 35.25%;
+  left: 46.5%;
+
 }
 
 input[type=checkbox]:checked ~ label > div {
   display: block;
+}
+
+input[type=checkbox]:checked ~ #allen {
+  color: #999999;
 }
 
 .lightbox {
@@ -166,9 +182,19 @@ display: none;
   height: 10vw;
 }
 
+#mailer_body {
+  width: 75%;
+  height: 15vw;
+}
+
 #curate_gallery {
   width: 50%;
   float: right;
   margin-right: 15%;
+}
 
+#aboutbody {
+  position: relative;
+  top: 1.75vw;
+  left: 3vw;
 }

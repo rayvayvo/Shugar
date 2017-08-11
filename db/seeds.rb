@@ -20,6 +20,11 @@ Curate.create({
   image: '1'
   })
 
+Mailer.create(
+      subject: "email subject",
+      body: "email body"
+      )
+
 Gallery.create({
       date: "aug 11, 2014",
       media_type: "paint",
