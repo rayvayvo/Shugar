@@ -72,6 +72,11 @@ a {
   border-right: 1px solid lightgrey;
 }
 
+#sideview {
+  float: right;
+  width: 70%;
+}
+
 #allen {
   color: dimgrey;
   height: 1.5em;
@@ -94,13 +99,76 @@ a {
   margin-bottom: 3%;
 }
 
+#gallerylabel {
+  font-size: 28pt;
+  border-bottom: 2px solid darkblue;
+  margin-bottom: 3%;
+}
+
+#upload {
+  font-size: 28pt;
+  border-bottom: 2px solid purple;
+  margin-bottom: 3%;
+}
+
+#uploader {
+  margin-top: 20vw;
+}
+
 #slideshow img {
   height: 12vw;
   width: 12vw;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+#sideview img {
+  height: 12vw;
+  width: 12vw;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
 }
 
 #console {
   width: 12vw;
   float: right;
   margin-right: 5vw;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked ~ label > img {
+  transform: scale(4.15);
+  cursor: zoom-out;
+  position: fixed;
+  top: 37%;
+  left: 47%;
+}
+
+input[type=checkbox]:checked ~ label > div {
+  display: block;
+}
+
+.lightbox {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0,0,0,.7);
+display: none;
+}
+
+#about_body {
+  width: 50%;
+  height: 10vw;
+}
+
+#curate_gallery {
+  width: 50%;
+  float: right;
+  margin-right: 15%;
+
 }

@@ -16,6 +16,10 @@ Contact.create({
   email: 'email@email.ca'
 })
 
+Curate.create({
+  image: '1'
+  })
+
 Gallery.create({
       date: "aug 11, 2014",
       media_type: "paint",

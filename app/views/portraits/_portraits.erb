@@ -1,6 +1,7 @@
 
 
 <section id="slideshow">
+<% count = 0 %>
 <% url = request.url.last.to_i %>
 <% if url == 0
  url = 1
@@ -8,20 +9,38 @@
 <% portraits = Gallery.where(media_type:  'portrait').offset((url * 9) -9)%>
 <% portraits_total = Gallery.where(media_type:  'portrait')%>
 
-  <div id="row1">
+ <div id="row1">
     <div class="slideshow_image" id="ss1">
       <% if portraits[0] %>
-        <%= image_tag "#{portraits[0].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck0">
+        <label for="zoomCheck0">
+        <div class= "lightbox">
+        </div>
+          <%= image_tag "#{portraits[0].title}.jpg"%>
+          <% count += 1 %>
+        </label>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss2">
       <% if portraits[1] %>
-        <%= image_tag "#{portraits[1].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck1">
+        <label for="zoomCheck1">
+        <div class= "lightbox">
+        </div>
+          <%= image_tag "#{portraits[1].title}.jpg"%>
+          <% count += 1 %>
+        </label>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss3">
       <% if portraits[2] %>
-        <%= image_tag "#{portraits[2].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck2">
+        <label for="zoomCheck2">
+        <div class= "lightbox">
+        </div>
+          <%= image_tag "#{portraits[2].title}.jpg"%>
+          <% count += 1 %>
+        </label>
       <% end %>
     </div>
   </div><br><br>
@@ -29,17 +48,35 @@
  <div id="row2">
     <div class="slideshow_image" id="ss4">
       <% if portraits[3] %>
-        <%= image_tag "#{portraits[3].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck3">
+        <label for="zoomCheck3">
+        <div class= "lightbox">
+        </div>
+          <%= image_tag "#{portraits[3].title}.jpg"%>
+          <% count += 1 %>
+        </label>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss5">
       <% if portraits[4] %>
-        <%= image_tag "#{portraits[4].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck4">
+        <label for="zoomCheck4">
+        <div class= "lightbox">
+        </div>
+          <%= image_tag "#{portraits[4].title}.jpg"%>
+          <% count += 1 %>
+       </label>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss6">
       <% if portraits[5] %>
-        <%= image_tag "#{portraits[5].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck5">
+        <label for="zoomCheck5">
+        <div class= "lightbox">
+        </div>
+          <% count += 1 %>
+          <%= image_tag "#{portraits[5].title}.jpg"%>
+        </label>
       <% end %>
     </div>
   </div><br><br>
@@ -47,17 +84,35 @@
    <div id="row3">
     <div class="slideshow_image" id="ss7">
       <% if portraits[6] %>
-        <%= image_tag "#{portraits[6].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck6">
+        <label for="zoomCheck6">
+        <div class= "lightbox">
+        </div>
+          <%= image_tag "#{portraits[6].title}.jpg"%>
+          <% count += 1 %>
+        </label>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss8">
       <% if portraits[7] %>
-        <%= image_tag "#{portraits[7].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck7">
+        <label for="zoomCheck7">
+        <div class= "lightbox">
+        </div>
+          <%= image_tag "#{portraits[7].title}.jpg"%>
+          <% count += 1 %>
+        </label>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss9">
       <% if portraits[8] %>
-        <%= image_tag "#{portraits[8].title}.jpg"%>
+        <input type="checkbox" id="zoomCheck8">
+        <label for="zoomCheck8">
+        <div class= "lightbox">
+        </div>
+          <%= image_tag "#{portraits[8].title}.jpg"%>
+          <% count += 1 %>
+        </label>
       <% end %>
     </div>
   </div><br><br>

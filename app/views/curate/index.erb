@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+</head>
+
+<% @about = About.first%>
+<% @contact = Contact.first %>
+<% @image = Curate.first %>
+<% @curate = Gallery.find(@image.image) %>
+
+<div id="allen">Allen Shugar</div>
+
+<%= render "sidebar" %>
+
+<section id="sideview">
+
+<div id="about">About<br></div>
+
+  <%= form_for @about, :method => "put" do |f| %>
+  <%= f.text_area :body, :value => @about.body %><br>
+  <%= f.submit "Update" %>
+  <% end %>
+
+<br>
+<br>
+
+<div id="contact">Contact</div>
+  <%= form_for @contact, :method => "put" do |f| %>
+  <div class="curate_label">Memo: <%= f.text_area :body, :value => @contact.body %></div><br>
+  <div class="curate_label">Phone: <%= f.text_area :phone, :value => @contact.phone %></div><br>
+  <div class="curate_label">Email: <%= f.text_area :email, :value => @contact.email %></div><br>
+    <br>
+  <%= f.submit "Update" %>
+  <% end %>
+<br>
+<br>
+
+<div id="gallerylabel">Gallery</div>
+  <div class="slideshow_image" id="ss1">
+    <input type="checkbox" id="zoomCheck0">
+    <label for="zoomCheck0">
+    <div class= "lightbox"></div>
+      <%= image_tag "#{@curate.title}.jpg"%>
+    </label>
+      <%= form_for @image, :method => "put" do |f| %>
+      <%= f.select :image, options_from_collection_for_select(Gallery.where('price > 0'), :id, :title, @image.image) %>
+      <%= f.submit 'change image' %>
+      <% end %>
+  </div>
+
+  <div id="curate_gallery">
+    <%= form_for @curate, :method => "put" do |f| %>
+    <div class="curate_label">Title: <%= @curate.title %></div><br>
+    <div class="curate_label">Media: <%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'] ]) %>
+    </div><br>
+    <div class="curate_label">Date: <%= f.text_field :date, :value => @curate.date %></div><br>
+    <div class="curate_label">Price: <%= f.text_field :price, :value => @curate.price %></div><br>
+    <div class="curate_label">Size: <%= f.text_field :size, :value => @curate.size %></div><br>
+      <br>
+    <%= f.submit "Update" %>
+    <% end %>
+  </div>
+
+  <br>
+  <section id= "uploader">
+  <div id="upload">Upload</div>
+
+  <%= form_for @curate, :method => "put" do |f| %>
+  <div class="curate_label">Title:<%= f.text_field :title, :value => "add a title" %></div><br>
+  <div class="curate_label">Media:<%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'] ]) %>
+  </div><br>
+  <div class="curate_label">Date: <%= f.text_field :date, :value => "date created" %></div><br>
+  <div class="curate_label">Price: <%= f.text_field :price, :value => "price" %></div><br>
+  <div class="curate_label">Size: <%= f.text_field :size, :value => "size" %></div><br>
+  <%= f.submit "Upload" %>
+  <% end %>
+
+  </section>
+
+</section>
+</html>

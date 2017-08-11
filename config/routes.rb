@@ -5,5 +5,6 @@ root to: "gallery#show"
 resources :mixed_media, :paintings, :portraits, only: [:index, :show]
 resources :about, :contact, only: [:index, :update]
 resources :gallery, only: [:index, :update, :create, :destroy, :show]
+resources :curate, only: [:index, :update]
 end
 
