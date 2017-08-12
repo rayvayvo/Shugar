@@ -12,7 +12,7 @@ class GalleryController < ApplicationController
     @curate.update(
       title: "#{params[:gallery]['title']}",
       media_type: "#{params[:gallery]['media_type']}",
-      date: "#{params[:gallery]['date']}",
+      medium: "#{params[:gallery]['medium']}",
       price: "#{params[:gallery]['price']}",
       size: "#{params[:gallery]['size']}"
       )

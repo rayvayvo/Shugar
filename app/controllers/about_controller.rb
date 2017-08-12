@@ -7,7 +7,9 @@ before_action :set_about
 
   def update
     @about.update(
-      body: "#{params[:about]['body']}"
+      image: "#{params[:about]['image']}",
+      bio: "#{params[:about]['bio']}",
+      statement: "#{params[:about]['statement']}"
       )
     redirect_to "/about"
   end

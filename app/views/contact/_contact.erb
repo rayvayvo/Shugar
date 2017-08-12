@@ -2,9 +2,8 @@
 <% @mail = Mailer.first%>
 
 
-<div id="contactinfo">
+<section id="contactinfo">
   <div><%= @contact.body %></div>
-</div>
 <br>
 
 <%= form_for @mail, :method => "put" do |f| %>
@@ -13,3 +12,6 @@
   <br>
    <%= f.submit "Send Message" %>
   <% end %>
+
+</div>
+

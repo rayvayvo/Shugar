@@ -25,15 +25,15 @@ a {
 }
 
 .highlighted {
-  background-color: #white;
+  background-color: #999999;
 }
 
 .highlighted a:link {
-  color: #999999;
+  color: white;
 }
 
 .highlighted a:visited {
-  color:#999999;
+  color: white;
 }
 
 .slideshow_image {
@@ -132,12 +132,17 @@ a {
 }
 
 #aboutimage img {
-  margin-top: 2vw;
+  margin-top: 3.25%;
+  margin-left: 3.25%;
   height: 14vw;
   width: 14vw;
-  transition: transform 0.25s ease;
-  cursor: zoom-in;
   float: left;
+}
+
+#aboutform {
+  float: right;
+  margin-right: 48%;
+  margin-left: 2%;
 }
 
 #console {
@@ -163,8 +168,8 @@ input[type=checkbox]:checked ~ label > div {
   display: block;
 }
 
-input[type=checkbox]:checked ~ #allen {
-  color: #999999;
+input[type=checkbox]:checked ~ #pageindex {
+  display: none;
 }
 
 .lightbox {
@@ -197,4 +202,51 @@ display: none;
   position: relative;
   top: 1.75vw;
   left: 3vw;
+}
+
+#aboutform select {
+  position: relative;
+    top: 12vw;
+    left: -13vw;
+}
+
+#homeimage img {
+  width:516px;
+  height: 516px;
+  background-color: white;
+  float:left;
+  margin: 3.25% 3.25% 3.25% 3.25%;
+}
+
+#sb_home {
+  width: 18%;
+}
+
+#sb_about {
+  width: 18%;
+}
+
+#sb_contact {
+  width: 22%;
+}
+
+#sb_curate {
+  width: 18%;
+}
+
+#sb_paintings {
+  width: 27%;
+}
+
+#sb_portraits {
+  width: 24%;
+}
+
+#sb_mixed_media {
+  width: 36%;
+}
+
+#contactinfo {
+  margin-top: 3.25%;
+  margin-left: 3.25%;
 }

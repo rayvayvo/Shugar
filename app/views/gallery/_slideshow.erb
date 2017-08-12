@@ -119,15 +119,12 @@
     </div>
   </div><br><br>
 
-
- </section>
-
  <div id="pageindex"> viewing <%= "#{((url * 9) - 8)} - #{(((url * 9)-9)+count)}" %> of <%= Gallery.count %><br>
-    <% if url > 1 %>
       <%= link_to "<<", '/gallery' %>
+    <% if url > 1 %>
       <%= link_to "<", "/gallery/#{url - 1}" %>
     <% else %>
-      << <
+      <%= link_to "<", "/gallery/" %>
     <% end %>
 
     <%= "page #{url} / #{(gallery_total.count.to_f/9).ceil}" %>
@@ -139,3 +136,6 @@
      > >>
     <% end %>
   </div>
+ </section>
+
+
