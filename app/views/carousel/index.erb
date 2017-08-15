@@ -4,23 +4,41 @@
 
 
 
- </head>
+ <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+</head>
+
+<div id="allen">Allen Shugar</div>
 
 <% @gallery = Gallery.where('price > 0') %>
 
 <body>
 
-  <div class="lightbox"></div>
+  <div id="lightbox"></div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <div class="frame">
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <%= image_tag "#{@gallery.first.title}.jpg", id: "allslide" %>
+                <%= link_to image_tag("#{@gallery.first.title}.jpg"),
+                '/gallery/1', id: "allslide" %>
+            <div class="artcard">
+                  Title: <%= @gallery.first.title %> <br>
+                  Medium: <%= @gallery.first.medium %> <br>
+                  Media: <%= @gallery.first.media_type %> <br>
+                  Price: $<%= @gallery.first.price %> <br>
+                  Size: <%= @gallery.first.size %>
+                </div>
           </div>
             <% @gallery.drop(1).each do |k| %>
              <div class="item">
-            <%= image_tag "#{k.title}.jpg", id: "allslide" %>
+                <%= link_to image_tag("#{k.title}.jpg"), "/gallery/#{((k.id.to_f)/9).ceil}", id: "allslide" %>
+                <div class="artcard">
+                  Title: <%= k.title %> <br>
+                  Medium: <%= k.medium %> <br>
+                  Media: <%= k.media_type %> <br>
+                  Price: $<%= k.price %> <br>
+                  Size: <%= k.size %>
+                </div>
              </div>
             <% end %>
         </div>
