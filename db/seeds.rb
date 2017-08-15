@@ -13,7 +13,6 @@ About.create({
 })
 
 Contact.create({
-  phone: '555-555-5555',
   body: 'when two tin cans on a string wont do',
   email: 'email@email.ca'
 })

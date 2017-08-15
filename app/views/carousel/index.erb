@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+ </head>
+
+<% @gallery = Gallery.where('price > 0') %>
+
+<body>
+
+  <div class="lightbox"></div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="frame">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <%= image_tag "#{@gallery.first.title}.jpg", id: "allslide" %>
+          </div>
+            <% @gallery.drop(1).each do |k| %>
+             <div class="item">
+            <%= image_tag "#{k.title}.jpg", id: "allslide" %>
+             </div>
+            <% end %>
+        </div>
+
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

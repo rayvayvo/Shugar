@@ -6,6 +6,11 @@ class GalleryController < ApplicationController
   def show
   end
 
+  def carousel
+
+    render "carousel"
+  end
+
   before_action :set_curate
 
   def update

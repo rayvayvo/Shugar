@@ -1,0 +1,300 @@
+// Place all the styles related to the carousel controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#allslide{
+     position: relative;
+     top: 257px;
+  transform: translateY(-50%);
+  margin: auto;
+   width: auto;
+  height: 516px;
+}
+
+.frame {
+  background-color: black;
+  height: 516px;
+  width: 516px;
+  position: fixed;
+  left: 25%;
+  top: 3.25%
+}
+
+
+body {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #999999;
+}
+
+
+.navbutton {
+  margin: 1% 0 1% 5%;
+  line-height: 200%;
+  font-size: 125%;
+  padding-left: 3%;
+  background-color: white;
+}
+
+.highlighted {
+  background-color: #999999;
+}
+
+.highlighted a:link {
+  color: white;
+}
+
+.highlighted a:visited {
+  color: white;
+}
+
+.slideshow_image {
+  width:12vw;
+  height: 12vw;
+  background-color: white;
+  float:left;
+  margin: 3.25% 3.25% 3.25% 3.25%;
+}
+
+#sidebar_buttons {
+  width: 30%;
+  float: left;
+  font-family: 'Didact Gothic', sans-serif;
+
+}
+
+#pageindex {
+  color: #999999;
+  float:right;
+  position: relative;
+  top: -3.5vw;
+  left: 14vw;
+  font-family: 'Didact Gothic', sans-serif;
+
+}
+
+#placeholder {
+  height: 2.82em;
+}
+
+#mainview {
+  background-color: white;
+  margin-left: 25%;
+  width: 50%;
+  padding-left: 0%;
+  height: 43vw;
+  position: fixed;
+  top: 0;
+  bottom: -11px;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+#sideview {
+  float: right;
+  width: 70%;
+}
+
+#allen {
+  color: #999999;
+  height: 1.5em;
+  line-height: 150%;
+  font-size: 33pt;
+  width: 27%;
+  margin-left: 1.5%;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+#about {
+  font-size: 28pt;
+  border-bottom: 2px solid limegreen;
+  margin-bottom: 3%;
+}
+
+#contact {
+  font-size: 28pt;
+  border-bottom: 2px solid coral;
+  margin-bottom: 3%;
+}
+
+#gallerylabel {
+  font-size: 28pt;
+  border-bottom: 2px solid darkblue;
+  margin-bottom: 3%;
+}
+
+#upload {
+  font-size: 28pt;
+  border-bottom: 2px solid purple;
+  margin-bottom: 3%;
+}
+
+#uploader {
+  margin-top: 20vw;
+}
+
+#slideshow img {
+  height: 14vw;
+  width: 14vw;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  position: relative;
+}
+
+#sideview img {
+  height: 12vw;
+  width: 12vw;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+#aboutimage img {
+  margin-top: 3.25%;
+  margin-left: 3.25%;
+  height: 14vw;
+  width: 14vw;
+  float: left;
+}
+
+#aboutform {
+  float: right;
+  margin-right: 48%;
+  margin-left: 2%;
+}
+
+#console {
+  width: 12vw;
+  float: right;
+  margin-right: 5vw;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked ~ label > img {
+  transform: scale(3.2);
+  cursor: zoom-out;
+  position: fixed;
+  top: 35.25%;
+  left: 46.5%;
+  z-index: 3;
+
+}
+
+input[type=checkbox]:checked ~ label > div {
+  display: block;
+}
+
+.lightbox {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0,0,0,.7);
+z-index: 2;
+}
+
+.navleft {
+  width: 5vw;
+  height: 5vw;
+  background-color: black;
+  position: fixed;
+  left: 19%;
+  top: 45%;
+  display: none;
+
+}
+
+.navright{
+  width: 5vw;
+  height: 5vw;
+  background-color: black;
+  position: fixed;
+  right: 12%;
+  top: 45%;
+  display: none;
+}
+
+#about_body {
+  width: 50%;
+  height: 10vw;
+}
+
+#mailer_body {
+  width: 75%;
+  height: 15vw;
+}
+
+#curate_gallery {
+  width: 50%;
+  float: right;
+  margin-right: 15%;
+}
+
+#aboutbody {
+  position: relative;
+  top: 1.75vw;
+  left: 3vw;
+}
+
+#aboutform select {
+  position: relative;
+    top: 12vw;
+    left: -13vw;
+}
+
+#homeimage img {
+  width:516px;
+  height: 516px;
+  background-color: white;
+  float:left;
+  margin: 3.25% 3.25% 3.25% 3.25%;
+}
+
+#sb_home {
+  width: 18%;
+}
+
+#sb_about {
+  width: 18%;
+}
+
+#sb_contact {
+  width: 22%;
+}
+
+#sb_curate {
+  width: 18%;
+}
+
+#sb_paintings {
+  width: 27%;
+}
+
+#sb_portraits {
+  width: 24%;
+}
+
+#sb_mixed_media {
+  width: 36%;
+}
+
+#contactinfo {
+  margin-top: 3.25%;
+  margin-left: 3.25%;
+}
+
+#myCarousel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0,0,0,.7);
+}

@@ -1,5 +1,3 @@
-<section id="slideshow">
-
 <% url = request.url.last.to_i %>
 <% if url == 0
  url = 1
@@ -7,15 +5,18 @@
 <% gallery = Gallery.where('price > 0').first%>
 <% gallery_total = Gallery.where('price > 0') %>
 
-  <div id="homeimage">
-          <%= image_tag "#{gallery.title}.jpg"%>
-        </label>
-    </div>
 
+<section id="slideshow">
+  <div id="row1">
+    <div id="homeimage">
+            <%= image_tag "#{gallery.title}.jpg"%>
+          </label>
+      </div>
+  </div>
  </section>
 
 <div id="pageindex">
-    <%= "page #{url} / #{(gallery_total.count.to_f/9).ceil}" %>
+    <%= "Index page / #{(gallery_total.count.to_f/9).ceil}" %>
 
     <% if url < (gallery_total.count.to_f/9).ceil %>
       <%= link_to ">", "/gallery/1" %>

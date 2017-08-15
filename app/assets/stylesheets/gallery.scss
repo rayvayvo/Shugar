@@ -1,13 +1,7 @@
-// Place all the styles related to the Gallery controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 
 body {
-  background-color: white;
-  font-family: 'Didact Gothic', sans-serif;
+  background-color: white
 }
 
 a {
@@ -26,6 +20,14 @@ a {
 
 .highlighted {
   background-color: #999999;
+}
+
+a:link {
+  color: #999999;
+}
+
+a:visited {
+  color: #999999;
 }
 
 .highlighted a:link {
@@ -47,6 +49,8 @@ a {
 #sidebar_buttons {
   width: 30%;
   float: left;
+  font-family: 'Didact Gothic', sans-serif;
+
 }
 
 #pageindex {
@@ -55,6 +59,8 @@ a {
   position: relative;
   top: -3.5vw;
   left: 14vw;
+  font-family: 'Didact Gothic', sans-serif;
+
 }
 
 #placeholder {
@@ -63,7 +69,7 @@ a {
 
 #mainview {
   background-color: white;
-  margin-left: 29%;
+  margin-left: 25%;
   width: 50%;
   padding-left: 0%;
   height: 43vw;
@@ -72,6 +78,7 @@ a {
   bottom: -11px;
   padding-top: 0%;
   padding-bottom: 0%;
+  font-family: 'Didact Gothic', sans-serif;
 }
 
 #sideview {
@@ -86,7 +93,7 @@ a {
   font-size: 33pt;
   width: 27%;
   margin-left: 1.5%;
-  padding-left: 1%;
+  font-family: 'Didact Gothic', sans-serif;
 }
 
 #about {
@@ -161,15 +168,12 @@ input[type=checkbox]:checked ~ label > img {
   position: fixed;
   top: 35.25%;
   left: 46.5%;
+  z-index: 3;
 
 }
 
 input[type=checkbox]:checked ~ label > div {
   display: block;
-}
-
-input[type=checkbox]:checked ~ #pageindex {
-  display: none;
 }
 
 .lightbox {
@@ -180,6 +184,28 @@ left: 0;
 right: 0;
 background: rgba(0,0,0,.7);
 display: none;
+z-index: 2;
+}
+
+.navleft {
+  width: 5vw;
+  height: 5vw;
+  background-color: black;
+  position: fixed;
+  left: 19%;
+  top: 45%;
+  display: none;
+
+}
+
+.navright{
+  width: 5vw;
+  height: 5vw;
+  background-color: black;
+  position: fixed;
+  right: 12%;
+  top: 45%;
+  display: none;
 }
 
 #about_body {
@@ -211,13 +237,13 @@ display: none;
 }
 
 #homeimage img {
-  width:516px;
-  height: 516px;
+  width:528px;
+  height: 511px;
   background-color: white;
   float:left;
-  margin: 3.25% 3.25% 3.25% 3.25%;
+  margin: 4.25% 3.25% 4.25% 6.25%;
 }
-
+;
 #sb_home {
   width: 18%;
 }

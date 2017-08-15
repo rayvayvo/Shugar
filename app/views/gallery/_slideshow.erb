@@ -13,8 +13,6 @@
       <% if gallery[0] %>
         <input type="checkbox" id="zoomCheck0">
         <label for="zoomCheck0">
-        <div class= "lightbox">
-        </div>
           <%= image_tag "#{gallery[0].title}.jpg"%>
           <% count += 1 %>
         </label>
@@ -24,8 +22,6 @@
       <% if gallery[1] %>
         <input type="checkbox" id="zoomCheck1">
         <label for="zoomCheck1">
-        <div class= "lightbox">
-        </div>
           <%= image_tag "#{gallery[1].title}.jpg"%>
           <% count += 1 %>
         </label>
@@ -35,11 +31,8 @@
       <% if gallery[2] %>
         <input type="checkbox" id="zoomCheck2">
         <label for="zoomCheck2">
-        <div class= "lightbox">
-        </div>
           <%= image_tag "#{gallery[2].title}.jpg"%>
           <% count += 1 %>
-
         </label>
       <% end %>
     </div>
@@ -52,8 +45,6 @@
       <% if gallery[3] %>
         <input type="checkbox" id="zoomCheck3">
         <label for="zoomCheck3">
-        <div class= "lightbox">
-        </div>
           <%= image_tag "#{gallery[3].title}.jpg"%>
           <% count += 1 %>
         </label>
@@ -63,8 +54,6 @@
       <% if gallery[4] %>
         <input type="checkbox" id="zoomCheck4">
         <label for="zoomCheck4">
-        <div class= "lightbox">
-        </div>
           <%= image_tag "#{gallery[4].title}.jpg"%>
           <% count += 1 %>
        </label>
@@ -74,8 +63,6 @@
       <% if gallery[5] %>
         <input type="checkbox" id="zoomCheck5">
         <label for="zoomCheck5">
-        <div class= "lightbox">
-        </div>
           <% count += 1 %>
           <%= image_tag "#{gallery[5].title}.jpg"%>
         </label>
@@ -88,8 +75,6 @@
       <% if gallery[6] %>
         <input type="checkbox" id="zoomCheck6">
         <label for="zoomCheck6">
-        <div class= "lightbox">
-        </div>
           <%= image_tag "#{gallery[6].title}.jpg"%>
           <% count += 1 %>
         </label>
@@ -99,24 +84,16 @@
       <% if gallery[7] %>
         <input type="checkbox" id="zoomCheck7">
         <label for="zoomCheck7">
-        <div class= "lightbox">
-        </div>
           <%= image_tag "#{gallery[7].title}.jpg"%>
           <% count += 1 %>
         </label>
       <% end %>
     </div>
-    <div class="slideshow_image" id="ss9">
+  <div class="slideshow_image" id="ss9">
       <% if gallery[8] %>
-        <input type="checkbox" id="zoomCheck8">
-        <label for="zoomCheck8">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{gallery[8].title}.jpg"%>
-          <% count += 1 %>
-        </label>
+        <%= link_to image_tag("#{gallery[8].title}.jpg"), '/carousel' %>
+            <% count += 1 %>
       <% end %>
-    </div>
   </div><br><br>
 
  <div id="pageindex"> viewing <%= "#{((url * 9) - 8)} - #{(((url * 9)-9)+count)}" %> of <%= Gallery.count %><br>

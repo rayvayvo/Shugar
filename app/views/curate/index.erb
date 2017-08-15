@@ -36,7 +36,6 @@
 <div id="contact">Contact</div>
   <%= form_for @contact, :method => "put" do |f| %>
   <div class="curate_label">Memo: <%= f.text_area :body, :value => @contact.body %></div><br>
-  <div class="curate_label">Phone: <%= f.text_area :phone, :value => @contact.phone %></div><br>
   <div class="curate_label">Email: <%= f.text_area :email, :value => @contact.email %></div><br>
     <br>
   <%= f.submit "Update" %>
