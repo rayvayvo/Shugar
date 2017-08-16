@@ -1,0 +1,2 @@
+module MixedHelper
+end

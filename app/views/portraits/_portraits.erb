@@ -1,137 +1,94 @@
-
-
 <section id="slideshow">
+
 <% count = 0 %>
 <% url = request.url.last.to_i %>
 <% if url == 0
  url = 1
  end  %>
-<% portraits = Gallery.where(media_type:  'portrait').offset((url * 9) -9)%>
-<% portraits_total = Gallery.where(media_type:  'portrait')%>
+<% gallery = Gallery.where(media_type: 'portrait').offset((url * 9) -9)%>
+<% gallery_total = Gallery.where(media_type: 'portrait') %>
 
- <div id="row1">
+  <div id="row1">
     <div class="slideshow_image" id="ss1">
-      <% if portraits[0] %>
-        <input type="checkbox" id="zoomCheck0">
-        <label for="zoomCheck0">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{portraits[0].title}.jpg"%>
-          <% count += 1 %>
-        </label>
+      <% if gallery[0] %>
+        <%= link_to image_tag("#{gallery[0].title}.jpg"), "/port.:#{gallery[0].id}" %>
+        <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss2">
-      <% if portraits[1] %>
-        <input type="checkbox" id="zoomCheck1">
-        <label for="zoomCheck1">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{portraits[1].title}.jpg"%>
-          <% count += 1 %>
-        </label>
+      <% if gallery[1] %>
+        <%= link_to image_tag("#{gallery[1].title}.jpg"), "/port.:#{gallery[1].id}" %>
+        <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss3">
-      <% if portraits[2] %>
-        <input type="checkbox" id="zoomCheck2">
-        <label for="zoomCheck2">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{portraits[2].title}.jpg"%>
-          <% count += 1 %>
-        </label>
+      <% if gallery[2] %>
+        <%= link_to image_tag("#{gallery[2].title}.jpg"), "/port.:#{gallery[2].id}" %>
+        <% count += 1 %>
       <% end %>
     </div>
   </div><br><br>
 
+
+
  <div id="row2">
     <div class="slideshow_image" id="ss4">
-      <% if portraits[3] %>
-        <input type="checkbox" id="zoomCheck3">
-        <label for="zoomCheck3">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{portraits[3].title}.jpg"%>
-          <% count += 1 %>
-        </label>
+      <% if gallery[3] %>
+        <%= link_to image_tag("#{gallery[3].title}.jpg"), "/port.:#{gallery[3].id}" %>
+        <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss5">
-      <% if portraits[4] %>
-        <input type="checkbox" id="zoomCheck4">
-        <label for="zoomCheck4">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{portraits[4].title}.jpg"%>
-          <% count += 1 %>
-       </label>
+      <% if gallery[4] %>
+        <%= link_to image_tag("#{gallery[4].title}.jpg"), "/port.:#{gallery[4].id}" %>
+        <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss6">
-      <% if portraits[5] %>
-        <input type="checkbox" id="zoomCheck5">
-        <label for="zoomCheck5">
-        <div class= "lightbox">
-        </div>
-          <% count += 1 %>
-          <%= image_tag "#{portraits[5].title}.jpg"%>
-        </label>
+      <% if gallery[5] %>
+        <%= link_to image_tag("#{gallery[5].title}.jpg"), "/port.:#{gallery[5].id}" %>
+        <% count += 1 %>
       <% end %>
     </div>
   </div><br><br>
 
    <div id="row3">
     <div class="slideshow_image" id="ss7">
-      <% if portraits[6] %>
-        <input type="checkbox" id="zoomCheck6">
-        <label for="zoomCheck6">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{portraits[6].title}.jpg"%>
-          <% count += 1 %>
-        </label>
+      <% if gallery[6] %>
+        <%= link_to image_tag("#{gallery[6].title}.jpg"), "/port.:#{gallery[6].id}" %>
+        <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss8">
-      <% if portraits[7] %>
-        <input type="checkbox" id="zoomCheck7">
-        <label for="zoomCheck7">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{portraits[7].title}.jpg"%>
-          <% count += 1 %>
-        </label>
+      <% if gallery[7] %>
+        <%= link_to image_tag("#{gallery[7].title}.jpg"), "/port.:#{gallery[7].id}" %>
+        <% count += 1 %>
       <% end %>
     </div>
-    <div class="slideshow_image" id="ss9">
-      <% if portraits[8] %>
-        <input type="checkbox" id="zoomCheck8">
-        <label for="zoomCheck8">
-        <div class= "lightbox">
-        </div>
-          <%= image_tag "#{portraits[8].title}.jpg"%>
-          <% count += 1 %>
-        </label>
+  <div class="slideshow_image" id="ss9">
+      <% if gallery[8] %>
+        <%= link_to image_tag("#{gallery[8].title}.jpg"), "/port.:#{gallery[8].id}" %>
+        <% count += 1 %>
       <% end %>
-    </div>
   </div><br><br>
 
-    <div id="pageindex">
-    <% if url > 1 %>
+ <div id="pageindex"> viewing <%= "#{((url * 9) - 8)} - #{(((url * 9)-9)+count)}" %> of <%=gallery_total.count %><br>
       <%= link_to "<<", '/portraits' %>
+    <% if url > 1 %>
       <%= link_to "<", "/portraits/#{url - 1}" %>
     <% else %>
-      << <
+      <%= link_to "<", "/portraits" %>
     <% end %>
 
-    <%= "page #{url} / #{(portraits_total.count.to_f/9).ceil}" %>
+    <%= "page #{url} / #{(gallery_total.count.to_f/9).ceil}" %>
 
-    <% if url < (portraits_total.count.to_f/9).ceil %>
+    <% if url < (gallery_total.count.to_f/9).ceil %>
       <%= link_to ">", "/portraits/#{url + 1}" %>
-      <%= link_to ">>", "/portraits/#{(portraits_total.count.to_f/9).ceil}"%>
+      <%= link_to ">>", "/portraits/#{(gallery_total.count.to_f/9).ceil}"%>
     <% else %>
      > >>
     <% end %>
   </div>
  </section>
+
+

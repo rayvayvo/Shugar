@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+ <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+</head>
+
+<div id="allen">Allen Shugar</div>
+
+<% @gallery = Gallery.where(media_type: "paint") %>
+<% url = request.url.split(".:").last.to_i %>
+<% urlpointer = 1 %>
+
+<body>
+
+  <div id="lightbox"></div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <div class="frame">
+        <div class="carousel-inner" role="listbox">
+            <% @gallery.each do |k| %>
+            <% if k.id.to_i == url %>
+             <div class="item active">
+            <% else %>
+              <div class= "item">
+            <% end %>
+                <%= link_to image_tag("#{k.title}.jpg"), "/paintings/#{((urlpointer.to_f)/9).ceil}", id: "allslide" %>
+                <div class="artcard">
+                  Title: <%= k.title %> <br>
+                  Medium: <%= k.medium %> <br>
+                  Media: <%= k.media_type %> <br>
+                  Price: $<%= k.price %> <br>
+                  Size: <%= k.size %>
+                </div>
+             </div>
+            <% urlpointer += 1 %>
+            <% end %>
+        </div>
+
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

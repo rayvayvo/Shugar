@@ -9,6 +9,6 @@ resources :about, :contact, only: [:index, :update, :show]
 resources :gallery, only: [:index, :update, :create, :destroy, :show]
 resources :curate, only: [:index, :update]
 resources :mailer, only: [:show, :create, :update]
-resources :carousel, only: [:index]
+resources :carousel, :paint, :port, :mixed, only: [:index]
 end
 
