@@ -9,7 +9,7 @@
 
 <div id="allen">Allen Shugar</div>
 
-<% @gallery = Gallery.where('price > 0') %>
+<% @gallery = Gallery.all %>
 <% url = request.url.split(".:").last.to_i %>
 <% urlpointer = 1 %>
 <body>
@@ -34,8 +34,8 @@
                   Size: <%= k.size %>
                 </div>
              </div>
-            <% end %>
             <% urlpointer += 1 %>
+            <% end %>
         </div>
 
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

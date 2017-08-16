@@ -30,8 +30,6 @@
   <% end %>
   </div>
 
-<br>
-<br>
 
 <div id="contact">Contact</div>
   <%= form_for @contact, :method => "put" do |f| %>
@@ -40,6 +38,7 @@
     <br>
   <%= f.submit "Update" %>
   <% end %>
+<br>
 <br>
 <br>
 
@@ -73,14 +72,17 @@
   <section id= "uploader">
   <div id="upload">Upload</div>
 
-  <%= form_for @curate, :method => "put" do |f| %>
+  <%= form_for @curate, :method => "create" do |f| %>
   <div class="curate_label">Title:<%= f.text_field :title, :value => "add a title" %></div><br>
   <div class="curate_label">Media:<%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'] ]) %>
   </div><br>
   <div class="curate_label">Medium: <%= f.text_field :medium, :value => "medium" %></div><br>
   <div class="curate_label">Price: <%= f.text_field :price, :value => "price" %></div><br>
   <div class="curate_label">Size: <%= f.text_field :size, :value => "size" %></div><br>
-  <%#= f.submit "Upload" %>
+  <div class="curate_label">upload: <%= f.label :image%><%= f.file_field :image %></div><br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
   <% end %>
 
   </section>

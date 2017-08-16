@@ -1,3 +1,23 @@
 // Place all the styles related to the curate controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#contact {
+  margin-top: 6vw;
+}
+
+#sideview textarea {
+  width: 16vw;
+}
+
+#aboutform input {
+  position: relative;
+top: 7.5vw;
+left: -14.25vw;
+}
+
+#aboutform select {
+  position: relative;
+    top: 11vw;
+    left: -14vw;
+}

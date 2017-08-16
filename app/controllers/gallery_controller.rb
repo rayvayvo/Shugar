@@ -25,6 +25,18 @@ class GalleryController < ApplicationController
     redirect_to "/"
   end
 
+  def create
+    Gallery.create(
+      title: "#{params[:gallery]['title']}",
+      media_type: "#{params[:gallery]['media_type']}",
+      medium: "#{params[:gallery]['medium']}",
+      price: "#{params[:gallery]['price']}",
+      size: "#{params[:gallery]['size']}"
+      )
+
+    redirect_to "/"
+  end
+
   private
     def set_curate
       @curate = Gallery.first
