@@ -9,14 +9,14 @@
 
 <div id="allen">Allen Shugar</div>
 
-<% @gallery = Gallery.where(media_type: "mixed") %>
+<% @gallery = Gallery.where(media_type: "mixed").order(created_at: :desc) %>
 <% url = request.url.split(".:").last.to_i %>
 <% urlpointer = 1 %>
 
 <body>
 
   <div id="lightbox"></div>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
     <div class="frame">
         <div class="carousel-inner" role="listbox">
@@ -26,7 +26,7 @@
             <% else %>
               <div class= "item">
             <% end %>
-                <%= link_to image_tag("#{k.title}.jpg"), "/mixed_media/#{((urlpointer.to_f)/9).ceil}", id: "allslide" %>
+                <%= link_to image_tag("#{k.url}.jpg"), "/mixed_media/#{((urlpointer.to_f)/9).ceil}", id: "allslide" %>
                 <div class="artcard">
                   Title: <%= k.title %> <br>
                   Medium: <%= k.medium %> <br>

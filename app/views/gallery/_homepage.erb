@@ -15,13 +15,4 @@
   </div>
  </section>
 
-<div id="pageindex">
-    <%= "Index page / #{(gallery_total.count.to_f/9).ceil}" %>
 
-    <% if url < (gallery_total.count.to_f/9).ceil %>
-      <%= link_to ">", "/gallery/1" %>
-      <%= link_to ">>", "/gallery/#{(gallery_total.count.to_f/9).ceil}"%>
-    <% else %>
-     > >>
-    <% end %>
-  </div>

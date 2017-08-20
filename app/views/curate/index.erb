@@ -8,7 +8,7 @@
 <% @about = About.first%>
 <% @contact = Contact.first %>
 <% @image = Curate.first %>
-<% @curate = Gallery.find(@image.image) %>
+<% @curate = Gallery.find(1) %>
 
 <div id="allen">Allen Shugar</div>
 
@@ -23,7 +23,7 @@
   <div id="aboutform">
 
   <%= form_for @about, :method => "put" do |f| %>
-  <%= f.select :image, options_from_collection_for_select(Gallery.all, :id, :title, @about.image) %>
+  <%= f.select :image, options_from_collection_for_select(Gallery.where(media_type: "about"), :id, :title, @about.image) %>
   Bio:<%= f.text_area :bio, :value => @about.bio %><br>
   Statement:<%= f.text_area :statement, :value => @about.statement %><br>
   <%= f.submit "Update" %>
@@ -74,7 +74,7 @@
 
   <%= form_for @curate, :method => "create" do |f| %>
   <div class="curate_label">Title:<%= f.text_field :title, :value => "add a title" %></div><br>
-  <div class="curate_label">Media:<%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'] ]) %>
+  <div class="curate_label">Media:<%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'], ['About', 'about'] ]) %>
   </div><br>
   <div class="curate_label">Medium: <%= f.text_field :medium, :value => "medium" %></div><br>
   <div class="curate_label">Price: <%= f.text_field :price, :value => "price" %></div><br>

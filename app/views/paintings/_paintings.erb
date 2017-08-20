@@ -5,25 +5,25 @@
 <% if url == 0
  url = 1
  end  %>
-<% gallery = Gallery.where(media_type: 'paint').offset((url * 9) -9)%>
+<% gallery = Gallery.where(media_type: 'paint').offset((url * 9) -9).order(created_at: :desc)%>
 <% gallery_total = Gallery.where(media_type: 'paint') %>
 
   <div id="row1">
     <div class="slideshow_image" id="ss1">
       <% if gallery[0] %>
-        <%= link_to image_tag("#{gallery[0].title}.jpg"), "/paint.:#{gallery[0].id}" %>
+        <%= link_to image_tag("#{gallery[0].url}.jpg"), "/paint.:#{gallery[0].id}" %>
         <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss2">
       <% if gallery[1] %>
-        <%= link_to image_tag("#{gallery[1].title}.jpg"), "/paint.:#{gallery[1].id}" %>
+        <%= link_to image_tag("#{gallery[1].url}.jpg"), "/paint.:#{gallery[1].id}" %>
         <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss3">
       <% if gallery[2] %>
-        <%= link_to image_tag("#{gallery[2].title}.jpg"), "/paint.:#{gallery[2].id}" %>
+        <%= link_to image_tag("#{gallery[2].url}.jpg"), "/paint.:#{gallery[2].id}" %>
         <% count += 1 %>
       <% end %>
     </div>
@@ -34,19 +34,19 @@
  <div id="row2">
     <div class="slideshow_image" id="ss4">
       <% if gallery[3] %>
-        <%= link_to image_tag("#{gallery[3].title}.jpg"), "/paint.:#{gallery[3].id}" %>
+        <%= link_to image_tag("#{gallery[3].url}.jpg"), "/paint.:#{gallery[3].id}" %>
         <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss5">
       <% if gallery[4] %>
-        <%= link_to image_tag("#{gallery[4].title}.jpg"), "/paint.:#{gallery[4].id}" %>
+        <%= link_to image_tag("#{gallery[4].url}.jpg"), "/paint.:#{gallery[4].id}" %>
         <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss6">
       <% if gallery[5] %>
-        <%= link_to image_tag("#{gallery[5].title}.jpg"), "/paint.:#{gallery[5].id}" %>
+        <%= link_to image_tag("#{gallery[5].url}.jpg"), "/paint.:#{gallery[5].id}" %>
         <% count += 1 %>
       <% end %>
     </div>
@@ -55,19 +55,19 @@
    <div id="row3">
     <div class="slideshow_image" id="ss7">
       <% if gallery[6] %>
-        <%= link_to image_tag("#{gallery[6].title}.jpg"), "/paint.:#{gallery[6].id}" %>
+        <%= link_to image_tag("#{gallery[6].url}.jpg"), "/paint.:#{gallery[6].id}" %>
         <% count += 1 %>
       <% end %>
     </div>
     <div class="slideshow_image" id="ss8">
       <% if gallery[7] %>
-        <%= link_to image_tag("#{gallery[7].title}.jpg"), "/paint.:#{gallery[7].id}" %>
+        <%= link_to image_tag("#{gallery[7].url}.jpg"), "/paint.:#{gallery[7].id}" %>
         <% count += 1 %>
       <% end %>
     </div>
   <div class="slideshow_image" id="ss9">
       <% if gallery[8] %>
-        <%= link_to image_tag("#{gallery[8].title}.jpg"), "/paint.:#{gallery[8].id}" %>
+        <%= link_to image_tag("#{gallery[8].url}.jpg"), "/paint.:#{gallery[8].id}" %>
         <% count += 1 %>
       <% end %>
   </div><br><br>

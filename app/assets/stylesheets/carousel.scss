@@ -9,15 +9,19 @@ a#allslide img{
   margin: auto;
    width: auto;
   height: 516px;
+  max-width: 150%;
 }
+
 
 .frame {
   background-color: black;
   height: 515px;
-  width: 516px;
+  width: auto;
   position: fixed;
   left: 25%;
-  top: 3.25%
+  top: 3.25%;
+  max-width: 95%;
+  max-width: 63vw;
 }
 
 a {
@@ -293,15 +297,16 @@ z-index: -1;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.78);
   z-index: -1;
 }
 
 .artcard {
-  position: fixed;
-  right: 5%;
-  top: 5%;
-  height: 10vw;
-  width: 20vw;
-  background-color: white;
+ position: fixed;
+left: 2.5%;
+bottom: 2.5%;
+height: 10vw;
+width: 20vw;
+color: #999999;
+background-color: #383838;
 }
