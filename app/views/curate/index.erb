@@ -7,8 +7,8 @@
 
 <% @about = About.first%>
 <% @contact = Contact.first %>
-<% @image = Curate.first %>
-<% @curate = Gallery.find(1) %>
+<% @target = Curate.first %>
+<% @curate = Gallery.where(url: "#{@target.url}").first %>
 
 <div id="allen">Allen Shugar</div>
 
@@ -18,14 +18,13 @@
 
 <div id="about">About<br></div>
 
-      <%= image_tag "#{@about.image}.jpg"%>
+      <%= image_tag "#{@about.url}.jpg"%>
 
   <div id="aboutform">
-
   <%= form_for @about, :method => "put" do |f| %>
-  <%= f.select :image, options_from_collection_for_select(Gallery.where(media_type: "about"), :id, :title, @about.image) %>
-  Bio:<%= f.text_area :bio, :value => @about.bio %><br>
-  Statement:<%= f.text_area :statement, :value => @about.statement %><br>
+  <%= f.select :url, options_from_collection_for_select(Gallery.where(media_type: "about"), :url, :url, @about.url) %>
+  <div id="bio">Bio:<%= f.text_area :bio, :value => @about.bio %><br></div>
+  <div id="statement">Statement:<%= f.text_area :statement, :value => @about.statement %><br></div>
   <%= f.submit "Update" %>
   <% end %>
   </div>
@@ -43,22 +42,21 @@
 <br>
 
 <div id="gallerylabel">Gallery</div>
-  <div class="slideshow_image" id="ss1">
-    <input type="checkbox" id="zoomCheck0">
-    <label for="zoomCheck0">
-    <div class= "lightbox"></div>
-      <%= image_tag "#{@curate.title}.jpg"%>
-    </label>
-      <%= form_for @image, :method => "put" do |f| %>
-      <%= f.select :image, options_from_collection_for_select(Gallery.where('price > 0'), :id, :title, @image.image) %>
+      <%= image_tag "#{@target.url}.jpg"%>
+      <br><br>
+      <%= form_for @target, :method => "put" do |f| %>
+      <%= f.select :url, options_from_collection_for_select(Gallery.where('price > 0'), :url, :title, @target.url) %>
+      <br>
       <%= f.submit 'change image' %>
       <% end %>
   </div>
 
   <div id="curate_gallery">
+<%= Gallery.last.inspect %>
+
     <%= form_for @curate, :method => "put" do |f| %>
     <div class="curate_label">Title: <%= @curate.title %></div><br>
-    <div class="curate_label">Media: <%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'] ]) %>
+    <div class="curate_label">Media: <%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'], ['About', 'about'] ]) %>
     </div><br>
     <div class="curate_label">Medium: <%= f.text_field :date, :value => @curate.medium %></div><br>
     <div class="curate_label">Price: <%= f.text_field :price, :value => @curate.price %></div><br>

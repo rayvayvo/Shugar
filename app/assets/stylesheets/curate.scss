@@ -12,12 +12,39 @@
 
 #aboutform input {
   position: relative;
-top: 7.5vw;
-left: -14.25vw;
+  top: 0.25vw;
+  left: -18vw;
 }
 
 #aboutform select {
   position: relative;
-    top: 11vw;
-    left: -14vw;
+   top: 7.5vw;
+  left: -17.75vw;
+}
+
+#aboutform {
+  position: relative;
+  left: 4.75%;
+  top: 5.25vw;
+}
+
+#bio {
+  position: relative;
+  top: -5vw;
+  right: -5vw;
+}
+
+#statement {
+  position: relative;
+  left: 5.25%;
+  top: -3vw;
+}
+
+#curate_gallery{
+  position: relative;
+    top: -18vw;
+}
+
+#uploader {
+  margin-top: 8vw;
 }

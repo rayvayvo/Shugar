@@ -6,10 +6,9 @@ class CurateController < ApplicationController
   end
 
   def update
-    @curate.update(
-      image: "#{params[:curate]['image']}"
-      )
-
+    Curate.first.update(
+      url: "#{params[:curate]['url']}"
+     )
     redirect_to "/curate"
   end
 
@@ -20,7 +19,7 @@ class CurateController < ApplicationController
       medium: "#{params[:gallery]['medium']}",
       price: "#{params[:gallery]['price']}",
       size: "#{params[:gallery]['size']}",
-      image: "#{params[:gallery]['image']}"
+      url: "#{params[:gallery]['url']}"
       )
     redirect_to "/"
 

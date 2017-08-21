@@ -8,7 +8,7 @@
 
 About.create({
   bio: "all about the artist",
-  image: "3",
+  url: "Z_Allen_photo",
   statement: 'This is the about section. read all about it!'
 })
 
@@ -18,7 +18,7 @@ Contact.create({
 })
 
 Curate.create({
-  image: "1"
+  url: "ON_Thoth"
   })
 
 Mailer.create(
@@ -590,3 +590,11 @@ Gallery.create(
       url: "MA_Glass_Miniature_1"
   )
 
+Gallery.create(
+      medium: "",
+      media_type: "about",
+      title: "",
+      size: "",
+      price: 0,
+      url: "Z_Allen_photo"
+  )

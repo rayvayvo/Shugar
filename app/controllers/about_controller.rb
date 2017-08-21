@@ -7,7 +7,7 @@ before_action :set_about
 
   def update
     @about.update(
-      image: "#{params[:about]['image']}",
+      url: "#{params[:about]['url']}",
       bio: "#{params[:about]['bio']}",
       statement: "#{params[:about]['statement']}"
       )
