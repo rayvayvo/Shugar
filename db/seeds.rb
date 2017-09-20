@@ -18,7 +18,7 @@ Contact.create({
 })
 
 Curate.create({
-  url: "ON_Thoth"
+  url: "41A_Thoth"
   })
 
 Mailer.create(
@@ -29,9 +29,27 @@ Mailer.create(
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
+      title: "Wind",
+      size: "",
+      url: "42A_Wind",
+      price: 12345
+  )
+
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
       title: "Thoth",
-      size: "4ft by 15ft",
-      url: "ON_Thoth",
+      size: "",
+      url: "41A_Thoth",
+      price: 12345
+  )
+
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Flaming Youth",
+      size: "",
+      url: "40A_Flaming_Youth",
       price: 12345
   )
 
@@ -39,562 +57,529 @@ Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Vampire",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OM_Vampire"
+      size: "",
+      url: "39A_Vampire",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Persephone",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OL_Persephone"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Anxious Sky",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OK_Anxious_Sky"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "4 Play",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OJ_4_Play"
+      size: "",
+      url: "38A_Persephone",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Aspects of the Goddess",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OI_Aspects_of_the_Goddess"
+      size: "",
+      url: "37A_Aspects_of_the_Goddess",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
-      title: "Dream",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OH_Dream"
+      title: "Anxious Sky",
+      size: "",
+      url: "36A_Anxious_Sky",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Intoxicated Poppies",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OG_Intoxicated_Poppies"
+      size: "",
+      url: "35A_Intoxicated_Poppies",
+      price: 12345
+  )
+
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Dream",
+      size: "",
+      url: "34A_Dream",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Moment Noticed",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OF_Moment_Noticed"
+      size: "",
+      url: "33A_Moment_Noticed",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Hidden Message",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OE_Hidden_Message"
-  )
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Wind",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OD_Wind"
-  )
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Flaming Youth",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OC_Flaming_Youth"
+      size: "",
+      url: "32A_Hidden_Message",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "The Yellow Chair",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OB_The_Yellow_Chair"
+      size: "",
+      url: "31A_The_Yellow_Chair",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Conversation Piece",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "OA_Conversation_Piece"
+      size: "",
+      url: "30A_Conversation_Piece",
+      price: 12345
   )
-
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "4 Play",
+      size: "",
+      url: "29A_4_Play",
+      price: 12345
+  )
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Mask",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AZ_Mask"
+      size: "",
+      url: "28A_Mask",
+      price: 12345
   )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Garuda",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AZ_Garuda_1"
+      size: "",
+      url: "27A_Garuda_1",
+      price: 12345
   )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Re-collection",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AY_Re-collection"
-  )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Saffron Robes",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AX_Saffron_Robes"
+      size: "",
+      url: "26A_Saffron_Robes",
+      price: 12345
   )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Two Monks",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AW_Two_Monks"
+      size: "",
+      url: "25A_Two_Monks",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
-      title: "Maan Memento",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AV_Mayan_Memento"
+      title: "Mayan Memento",
+      size: "",
+      url: "24A_Mayan_Memento",
+      price: 12345
   )
-
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Spirit Renewal",
+      size: "",
+      url: "23A_Spirit_Renewal",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Re-collection",
+      size: "",
+      url: "22A_Re-collection",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Look A Head",
+      size: "",
+      url: "21A_Look_A_Head",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Lucid Moment",
+      size: "",
+      url: "20A_Lucid_Moment",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Boys Across the Bay",
+      size: "",
+      url: "19A_Boys_Across_the_Bay",
+      price: 12345
+  )
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Remember",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AU_Remember"
+      size: "",
+      url: "18A_Remember",
+      price: 12345
   )
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Promise",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AT_Promise"
+      size: "",
+      url: "17A_Promise",
+      price: 12345
   )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Freefall",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AS_Freefall"
+      size: "",
+      url: "16A_Freefall",
+      price: 12345
   )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Daydream",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AR_Daydream"
+      size: "",
+      url: "15A_Daydream",
+      price: 12345
   )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Look Ahead",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AQ_Look_Ahead"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Lucid Moment",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AP_Lucid_Moment"
-  )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Spring Dance",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AO_Spring_Dance"
+      size: "",
+      url: "14A_Spring_Dance",
+      price: 12345
   )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Spirit Renewal",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AN_SpiritRenewal"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Boys Accross the Bay",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AM_Boys_Across_the_Bay"
-  )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Nostalgia",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AL_Nostalgia"
+      size: "",
+      url: "13A_Nostalgia",
+      price: 12345
   )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
-      title: "Inner Voice",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AK_Inner_Voice_1"
+      title: "Inner Voice 1",
+      size: "",
+      url: "12A_Inner_Voice_1",
+      price: 12345
   )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Embedded",
+      size: "",
+      url: "11A_Embedded",
+      price: 12345
+  )
+
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Wood Nymph",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AJ_Wood_Nymph"
+      size: "",
+      url: "10A_Wood_Nymph",
+      price: 12345
   )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Embedded",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AI_Embedded"
-  )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Through the Wall",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AH_Through_the_Wall"
+      size: "",
+      url: "9A_Through_the_Wall",
+      price: 12345
   )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Yellow Maple",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AG_Yellow_Maple"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Goldleaf",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AF_Goldleaf"
-  )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Floating Leaf",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AE_Floating_leaf"
+      size: "",
+      url: "8A_Floating_Leaf",
+      price: 12345
   )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Calvin's Window",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AD_Calvin's_Window"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "paint",
-      title: "Burnished Leaves",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AC_Burnished_Leaves"
-  )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Stillness",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AB_Stillness"
+      size: "",
+      url: "7A_Stillness",
+      price: 12345
   )
-
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Yellow Maple",
+      size: "",
+      url: "6A_Yellow_Maple",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Burnished Leaves",
+      size: "",
+      url: "5A_Burnished_Leaves",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Goldleaf",
+      size: "",
+      url: "4A_Goldleaf",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Calvin's Window",
+      size: "",
+      url: "3A_Calvin's_Window",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "paint",
+      title: "Transitory Forest",
+      size: "",
+      url: "2A_Transitory_Forest",
+      price: 12345
+  )
 Gallery.create(
       medium: "oil on canvas",
       media_type: "paint",
       title: "Shifting Light",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "AA_Shifting_Light"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "PJ Calvin",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PJ_Calvin"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "Phillip",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PI_Phillip"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "Delores' Grandchildren",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PH_Delores'_Grandchildren"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "McDonald Kids",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PG_McDonald_Kids"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "Cameron",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PF_Cameron"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "Veronica",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PE_Veronica"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "Chris & Brian",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PD_Chris_&_Brian"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "Nancy",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PC_Nancy"
-  )
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "Heidi & Vivian",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PB_Heidi_&_Vivian"
+      size: "",
+      url: "1A_Shifting_Light",
+      price: 12345
   )
 
 
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "portrait",
-      title: "Paddy",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "PA_Paddy"
-  )
-
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "mixed",
-      title: "Our Lady of the Sunglasses",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MK_Our_Lady_of_the_Sunglasses"
-  )
-
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "mixed",
-      title: "Kenbox",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MJ_Kenbox"
-  )
-
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "mixed",
-      title: "Barbiebox",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MI_Barbiebox"
-  )
-
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "mixed",
-      title: "Babybox",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MH_Babybox"
-  )
-
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "mixed",
-      title: "Diva Sculpture",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MG_Diva_Sculpture"
-  )
-
-
-Gallery.create(
-      medium: "oil on canvas",
-      media_type: "mixed",
-      title: "Glass Sculpture",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MF_Glass_Sculpture"
-  )
 
 
 Gallery.create(
       medium: "oil on canvas",
       media_type: "mixed",
       title: "Beach Tile",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "ME_Beach_Tile"
+      size: "",
+      url: "M11_Beach_Tile",
+      price: 12345
   )
-
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "mixed",
+      title: "Diva Sculpture",
+      size: "",
+      url: "M10_Diva_Sculpture",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "mixed",
+      title: "Glass Sculpture",
+      size: "",
+      url: "M9_Glass_Sculpture",
+      price: 12345
+  )
 Gallery.create(
       medium: "oil on canvas",
       media_type: "mixed",
       title: "Glass Miniature 4",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MD_Glass_Miniature_4"
+      size: "",
+      url: "M8_Glass_Miniature_4",
+      price: 12345
   )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "mixed",
       title: "Glass Miniature 3",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MC_Glass_Miniature_3"
+      size: "",
+      url: "M7_Glass_Miniature_3",
+      price: 12345
   )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "mixed",
-      title: "Glass Miniature 2",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MB_Glass_Miniature_2"
+      title: "Glass miniature 2",
+      size: "",
+      url: "M6_Glass_Miniature_2",
+      price: 12345
   )
-
 Gallery.create(
       medium: "oil on canvas",
       media_type: "mixed",
       title: "Glass Miniature 1",
-      size: "4ft by 15ft",
-      price: 12345,
-      url: "MA_Glass_Miniature_1"
+      size: "",
+      url: "M5_Glass_Miniature_1",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "mixed",
+      title: "Our Lady of the Sunglasses",
+      size: "",
+      url: "M4_Our_Lady_of_the_Sunglasses",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "mixed",
+      title: "Babybox",
+      size: "",
+      url: "M3_Babybox",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "mixed",
+      title: "Kenbox",
+      size: "",
+      url: "M2_Kenbox",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "mixed",
+      title: "Barbiebox",
+      size: "",
+      url: "M1_Barbiebox",
+      price: 12345
   )
 
+
+
+
 Gallery.create(
-      medium: "",
-      media_type: "about",
-      title: "",
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "McDonald Kids",
       size: "",
-      price: 0,
-      url: "Z_Allen_photo"
+      url: "P12_McDonald_Kids",
+      price: 12345
   )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Veronica",
+      size: "",
+      url: "P11_Veronica",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Cameron",
+      size: "",
+      url: "P10_Cameron",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Phillip",
+      size: "",
+      url: "P9_Phillip",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Chris & Brian",
+      size: "",
+      url: "P8_Chris_&_Brian",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Nancy",
+      size: "",
+      url: "P7_Nancy",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "trio",
+      size: "",
+      url: "P6_trio",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Delores' Grandchildren",
+      size: "",
+      url: "P5_Delores_Grandchildren",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Calvin",
+      size: "",
+      url: "P4_Calvin",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Jennifer",
+      size: "",
+      url: "P3_Jennifer",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Vivian & Heidi",
+      size: "",
+      url: "P2_Vivian_&_Heidi",
+      price: 12345
+  )
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "portrait",
+      title: "Paddy",
+      size: "",
+      url: "P1_Paddy",
+      price: 12345
+  )
+
+
+
+
+Gallery.create(
+      medium: "oil on canvas",
+      media_type: "about",
+      title: "allen photo",
+      size: "",
+      url: "Z_Allen_photo",
+      price: 12345
+  )
+

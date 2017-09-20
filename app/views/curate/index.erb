@@ -21,6 +21,7 @@
       <%= image_tag "#{@about.url}.jpg"%>
 
   <div id="aboutform">
+
   <%= form_for @about, :method => "put" do |f| %>
   <%= f.select :url, options_from_collection_for_select(Gallery.where(media_type: "about"), :url, :url, @about.url) %>
   <div id="bio">Bio:<%= f.text_area :bio, :value => @about.bio %><br></div>
@@ -52,11 +53,9 @@
   </div>
 
   <div id="curate_gallery">
-<%= Gallery.last.inspect %>
-
     <%= form_for @curate, :method => "put" do |f| %>
     <div class="curate_label">Title: <%= @curate.title %></div><br>
-    <div class="curate_label">Media: <%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'], ['About', 'about'] ]) %>
+    <div class="curate_label">Media type: <%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'], ['About', 'about'] ]) %>
     </div><br>
     <div class="curate_label">Medium: <%= f.text_field :date, :value => @curate.medium %></div><br>
     <div class="curate_label">Price: <%= f.text_field :price, :value => @curate.price %></div><br>
@@ -70,7 +69,7 @@
   <section id= "uploader">
   <div id="upload">Upload</div>
 
-  <%= form_for @curate, :method => "create" do |f| %>
+  <%= form_for @curate, :method => "create", :html => { :multipart => true } do |f| %>
   <div class="curate_label">Title:<%= f.text_field :title, :value => "add a title" %></div><br>
   <div class="curate_label">Media:<%= f.select :media_type, ([['Painting', 'paint'], ['Portrait', 'portrait'], ['Mixed Media', 'mixed'], ['About', 'about'] ]) %>
   </div><br>

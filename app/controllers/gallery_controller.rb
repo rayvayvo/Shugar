@@ -13,7 +13,8 @@ class GalleryController < ApplicationController
       medium: "#{params[:gallery]['medium']}",
       price: "#{params[:gallery]['price']}",
       size: "#{params[:gallery]['size']}",
-      url: "#{params[:gallery]['url']}"
+      url: "#{params[:gallery]['url']}",
+      image: "#{params[:gallery]['image']}"
       )
 
     redirect_to "/"
@@ -26,7 +27,8 @@ class GalleryController < ApplicationController
       medium: "#{params[:gallery]['medium']}",
       price: "#{params[:gallery]['price']}",
       size: "#{params[:gallery]['size']}",
-      url: "#{params[:gallery]['url']}"
+      url: "#{params[:gallery]['url']}",
+      image: "#{params[:gallery]['image']}"
       )
 
     redirect_to "/"

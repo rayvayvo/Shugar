@@ -27,12 +27,11 @@
               <div class= "item">
             <% end %>
                 <%= link_to image_tag("#{k.url}.jpg"), "/portraits/#{((urlpointer.to_f)/9).ceil}", id: "allslide" %>
-                <div class="artcard">
+              <div class="artcard">
                   Title: <%= k.title %> <br>
                   Medium: <%= k.medium %> <br>
-                  Media: <%= k.media_type %> <br>
+                  Size: <%= k.size %> <br>
                   Price: $<%= k.price %> <br>
-                  Size: <%= k.size %>
                 </div>
              </div>
             <% urlpointer += 1 %>
@@ -40,12 +39,12 @@
         </div>
 
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-menu-left icon-prev" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
 
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-menu-right icon-next" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
 

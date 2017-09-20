@@ -1,5 +1,7 @@
 class CurateController < ApplicationController
 
+http_basic_authenticate_with :name => "allenS", :password => "urban123", only: :index
+
   before_action :set_curate
 
   def index
@@ -19,7 +21,8 @@ class CurateController < ApplicationController
       medium: "#{params[:gallery]['medium']}",
       price: "#{params[:gallery]['price']}",
       size: "#{params[:gallery]['size']}",
-      url: "#{params[:gallery]['url']}"
+      url: "#{params[:gallery]['url']}",
+      image: "#{params[:gallery]['image']}"
       )
     redirect_to "/"
 

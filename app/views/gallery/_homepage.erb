@@ -2,8 +2,7 @@
 <% if url == 0
  url = 1
  end  %>
-<% gallery = Gallery.where('price > 0').first%>
-<% gallery_total = Gallery.where('price > 0') %>
+<% gallery = Gallery.where(title: "Shifting Light").first%>
 
 
 <section id="slideshow">
