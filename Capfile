@@ -1,8 +1,18 @@
-# Load DSL and set up stages
 require "capistrano/setup"
+require "capistrano/deploy"
+require "capistrano/scm/git"
+
+
+install_plugin Capistrano::SCM::Git
+
+require "capistrano/setup"
+require "capistrano/deploy"
+require "capistrano/rails"
+
+set :linked_files, %w{config/secrets.yml}
+# Load DSL and set up stages
 
 # Include default deployment tasks
-require "capistrano/deploy"
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -12,9 +22,6 @@ require "capistrano/deploy"
 # require "capistrano/scm/svn"
 # install_plugin Capistrano::SCM::Svn
 # or
-require 'capistrano/rails'
-install_plugin Capistrano::SCM::Git
-
 # Include tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:

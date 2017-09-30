@@ -1,11 +1,16 @@
-# config valid only for current version of Capistrano
 lock "3.9.1"
 
 set :application, "AllenShugar"
-set :scm, :git
 set :repo_url, "git@github.com:rayvayvo/Shugar.git"
-# set :scm_passphrase, ""
-set :user, "allenshugar"
+set :deploy_to, "/domains/allenshugar/public/"
+set :pty, true
+
+
+# set :login, "allenshugar"
+# set :password, "39MilesRoad"
+# set :ftp_host, "216.19.68.179"
+
+
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
